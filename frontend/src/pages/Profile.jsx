@@ -578,7 +578,7 @@ import {
   FiLogOut,
 } from "react-icons/fi";
 
-import { getMyOrders } from "../services/orderService";
+import { getMyOrders } from "../services/OrderService";
 
 const Profile = () => {
 
