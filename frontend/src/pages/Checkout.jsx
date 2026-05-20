@@ -5,7 +5,7 @@ import { useCart } from "../context/CartContext";
 import {
   checkoutOrder,
   verifyPayment,
-} from "../services/orderService";
+} from "../services/OrderService";
 
 const Checkout = () => {
 
