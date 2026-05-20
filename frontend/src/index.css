@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+
+/* 
+@keyframes slide1 {
+  0%, 30% {
+    opacity: 1;
+  }
+  33%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slide2 {
+  0%, 30% {
+    opacity: 0;
+  }
+  33%, 63% {
+    opacity: 1;
+  }
+  66%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slide3 {
+  0%, 63% {
+    opacity: 0;
+  }
+  66%, 96% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-slide {
+  animation: slide1 9s infinite;
+}
+
+.animate-slide2 {
+  animation: slide2 9s infinite;
+}
+
+.animate-slide3 {
+  animation: slide3 9s infinite;
+} */
