@@ -1,6 +1,7 @@
 
 
 import { useEffect, useState } from "react";
+import { getAllUsers } from "../../services/authService";
 
 import {
   Package,
@@ -20,6 +21,8 @@ function AdminDashboard() {
 
   const [loading, setLoading] =
     useState(true);
+
+  const [users, setUsers] = useState([])
 
   // FETCH DATA
   useEffect(() => {
@@ -56,6 +59,11 @@ function AdminDashboard() {
 
         const orderData =
           await orderResponse.json();
+        
+        const userData = 
+          await getAllUsers();
+        
+        setUsers(userData);
 
         setProducts(
           productData.results || productData
@@ -88,14 +96,8 @@ function AdminDashboard() {
     );
 
   // TOTAL USERS
-  const totalUsers =
-    new Set(
-
-      orders.map(
-        (order) => order.user
-      )
-
-    ).size;
+const totalUsers =
+  users.length;
 
   // RECENT ORDERS
   const recentOrders =

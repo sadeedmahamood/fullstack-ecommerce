@@ -6,6 +6,8 @@ from .serializer import RegisterSerializer
 from rest_framework import status
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.contrib.auth import authenticate
+from django.contrib.auth.models import User
+
 
 # REGISTER
 @api_view(['POST'])
@@ -66,3 +68,11 @@ def login(request):
         'username': user.username,
 
     })
+
+
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def all_users(request):
+    users = User.objects.all()
+    serializer = RegisterSerializer(users, many=True)
+    return Response(serializer.data)

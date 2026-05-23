@@ -29,7 +29,7 @@ const Login = () => {
 
     if (token && isAdmin) {
 
-      navigate("/admin/products");
+      navigate("/admin");
 
     }
 
@@ -99,7 +99,7 @@ const Login = () => {
       // REDIRECT BASED ON ROLE
       if (data.is_admin) {
 
-        navigate("/admin/products");
+        navigate("/admin");
 
       } else {
 
